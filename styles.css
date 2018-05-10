@@ -1,0 +1,68 @@
+ul.top > li {
+    display: inline;
+}
+
+span {
+    display: block;
+    border: 1px solid black;
+    margin: 25px;
+}
+
+.n-child section:nth-of-type(even) {
+    border: 1px solid green;
+  }
+
+  /* Change the top ul content to be displayed inline, with a comma between the three numbers. */
+  /* p:not(:nth-child(2n+1)) */
+
+  ul.top :not(:last-child)::after {
+        content: ","; /* Insert content that looks like bullets */
+        display: inline;
+        color: blue; /* Or a color you prefer */
+}
+
+/* In the article element with the class n-type, make each odd section's font color blu */
+
+.n-type section:nth-last-of-type(odd) {
+    color: blue;
+}
+
+/* In the article element with the class first-of-type, make the first aside element's background color lime. */
+
+.first-of-type aside:first-of-type {
+    background-color: green;
+}
+.first-of-type section:first-of-type {
+    background-color: purple;
+}
+
+/* In the article element with the class three, give each section a background color of orange. */
+.three section:nth-last-of-type(n) {
+    background-color: orange;
+}
+
+/* In the article element with the class three,
+ give the first child element, regardless of type,
+  a background color of goldenrod. */
+article.three :first-child {
+    background-color: blue;
+}
+
+/* In the article element with the class three,
+ give the last child element, regardless of type,
+  a background color of darkslategray. */
+
+article.three :last-child {
+    background-color: darkslategrey;
+}
+
+/* Give each article element a title of "Article parent element",
+a dashed gray border, and a background color of royalblue.
+Also ensure that it spans the entire length of the document. */
+
+article :first-child {
+    content: "Article Parent Element";
+    border: 1px dashed gray;
+    background-color: royalblue;
+
+}
